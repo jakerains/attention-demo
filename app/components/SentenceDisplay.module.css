@@ -1,0 +1,39 @@
+.sentenceContainer {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  color: white;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.explanation {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 15px;
+}
+
+.tokenContainer {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.token {
+  margin-right: 5px;
+}
+
+.highlight {
+  background-color: rgba(255, 255, 0, 0.3);
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.hint {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+}
+

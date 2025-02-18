@@ -1,0 +1,13 @@
+.introductionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.explanation {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1em;
+  line-height: 1.6;
+  text-align: center;
+}
+

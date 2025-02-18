@@ -1,0 +1,19 @@
+.explanationPanel {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.sectionTitle {
+  color: white;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.explanationPanel p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+

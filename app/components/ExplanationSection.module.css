@@ -1,0 +1,18 @@
+.explanationContainer {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.sectionTitle {
+  color: white;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.explanationContainer p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
