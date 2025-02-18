@@ -17,6 +17,13 @@ const steps = [
   { title: "Explanation", component: ExplanationSection },
 ]
 
+// First, let's define the type for the weights
+type Weights = {
+  dog: number;
+  drink: number;
+  hot: number;
+}
+
 export default function AttentionDemo() {
   const [weights, setWeights] = useState({
     dog: 0.2,
@@ -26,12 +33,18 @@ export default function AttentionDemo() {
   const [showIntro, setShowIntro] = useState(true)
   const [currentStep, setCurrentStep] = useState(0)
 
+  // Then fix the handleWeightChange function
   const handleWeightChange = (word: string, value: number) => {
-    setWeights((prev) => {
-      const newWeights = { ...prev, [word]: value }
-      const sum = Object.values(newWeights).reduce((a, b) => a + b, 0)
-      return Object.fromEntries(Object.entries(newWeights).map(([k, v]) => [k, v / sum]))
-    })
+    setWeights((prev: Weights) => {
+      const newWeights = { ...prev, [word]: value } as Weights;
+      const sum = Object.values(newWeights).reduce((a, b) => a + b, 0);
+      // Ensure we return an object with the correct shape
+      return {
+        dog: newWeights.dog / sum,
+        drink: newWeights.drink / sum,
+        hot: newWeights.hot / sum
+      };
+    });
   }
 
   const nextStep = () => setCurrentStep((prev) => Math.min(prev + 1, steps.length - 1))
